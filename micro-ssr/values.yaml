@@ -34,6 +34,10 @@ service:
   type: ClusterIP
   port: 80
 
+microSSR:
+  home:
+  about:
+
 ingress:
   enabled: false
   annotations: {}
