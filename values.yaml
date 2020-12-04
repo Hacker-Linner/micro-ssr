@@ -35,8 +35,8 @@ service:
   port: 3000
 
 microSSR:
-  home: micro-ssr-about
-  about: micro-ssr-home
+  home: micro-ssr-about:3001
+  about: micro-ssr-home:3002
 
 ingress:
   enabled: true
