@@ -27,6 +27,15 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            {{- if .Values.microSSR.home }}
+            - name: SSR_HOME_TARGET
+              value: {{ quote .Values.microSSR.home }}
+            {{- end }}
+            {{- if .Values.microSSR.about }}
+            - name: SSR_ABOUT_TARGET
+              value: {{ .Values.microSSR.about }}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.containerPort }}

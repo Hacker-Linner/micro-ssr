@@ -35,6 +35,10 @@ service:
   port: 80
   containerPort: 3000
 
+microSSR:
+  home: micro-ssr-about
+  about: micro-ssr-home
+
 ingress:
   enabled: true
   annotations:
