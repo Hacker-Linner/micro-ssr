@@ -36,8 +36,8 @@ service:
   containerPort: 3000
 
 microSSR:
-  home: micro-ssr-home
-  about: micro-ssr-about
+  home: "http://micro-ssr-home"
+  about: "http://micro-ssr-about"
 
 ingress:
   enabled: true
