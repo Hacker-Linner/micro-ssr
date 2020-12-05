@@ -29,10 +29,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             {{- if .Values.microSSR.home }}
-            - env={{ .Values.microSSR.home }}
+            - env="{{ .Values.microSSR.home }}"
             {{- end }}
             {{- if .Values.microSSR.about }}
-            - env={{ .Values.microSSR.about }}
+            - env="{{ .Values.microSSR.about }}"
             {{- end }}
             - yarn start
           env:
