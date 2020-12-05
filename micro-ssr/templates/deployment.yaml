@@ -29,10 +29,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             {{- if .Values.microSSR.home }}
-            - env SSR_HOME_TARGET="{{ .Values.microSSR.home }}" yarn start
-            {{- else }}
+            - env SSR_HOME_TARGET="{{ .Values.microSSR.home }}"
+            {{- end }}
             - yarn start
-            {{- end}}
           env:
             {{- if .Values.microSSR.home }}
             - name: SSR_HOME_TARGET
