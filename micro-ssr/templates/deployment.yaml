@@ -28,10 +28,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
-            {{- if .Values.microSSR.home }}
-            - env SSR_HOME_TARGET="{{ .Values.microSSR.home }}"
-            {{- end }}
-            - yarn start
+            - NODE_ENV=production ts-node genesis.prod -p=tsconfig.json
           env:
             {{- if .Values.microSSR.home }}
             - name: SSR_HOME_TARGET
