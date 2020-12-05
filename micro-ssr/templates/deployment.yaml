@@ -28,7 +28,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
-            - NODE_ENV=production ts-node genesis.prod -p=tsconfig.json
+            - NODE_ENV=production ts-node /app/egg/genesis.prod -p=/app/egg/tsconfig.json
           env:
             {{- if .Values.microSSR.home }}
             - name: SSR_HOME_TARGET
