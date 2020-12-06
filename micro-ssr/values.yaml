@@ -35,6 +35,7 @@ service:
   port: 80
 
 microSSR:
+  domain:
   home:
   about:
 

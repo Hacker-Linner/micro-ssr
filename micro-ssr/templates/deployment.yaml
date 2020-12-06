@@ -28,6 +28,10 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            {{- if .Values.microSSR.domain }}
+            - name: SSR_DOMAIN
+              value: {{ quote .Values.microSSR.domain }}
+            {{- end }}
             {{- if .Values.microSSR.home }}
             - name: SSR_HOME_TARGET
               value: {{ quote .Values.microSSR.home }}

@@ -36,6 +36,7 @@ service:
   containerPort: 3000
 
 microSSR:
+  domain: "https://micro-ssr.hacker-linner.com"
   home: "http://micro-ssr-home"
   about: "http://micro-ssr-about"
 
