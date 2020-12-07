@@ -49,3 +49,4 @@ helm install micro-ssr-about ./micro-ssr -f values-about.yaml -n micro-ssr
 * [深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/project/namespaces.html)
 * [Genesis](https://fmfe.github.io/genesis-docs/)
 * [tms](https://followmetech.github.io/tms/)
+* [Vue.js 服务器端渲染指南](https://ssr.vuejs.org/zh/)
